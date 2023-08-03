@@ -36,7 +36,7 @@ namespace Domain.Placas
         public string TipoPersonas { get; private set; } = string.Empty; // Fisica o Juridica
         public string TipoAutomovil { get; private set; } = string.Empty; // Publico, Privado, Transporte y Pesado
         public double ValorTotalPlaca { get; private set; } = 0;
-        public bool Active { get; private set; }
+        public bool Active { get; private set; } // true solicitud pendiente de revision, false solicitud aceptada con creacion de # de placa.
 
         public static Placa UpdatePlaca(Guid id, string Nombres, string Apellidos,
       DNI Cedula, string TipoPlaca, string TipoPersonas
