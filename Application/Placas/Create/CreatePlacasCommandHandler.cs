@@ -1,11 +1,12 @@
 ﻿using Domain.Placas;
 using Domain.Primitives;
 using Domain.ValueObjects;
+using ErrorOr;
 using MediatR;
 
 namespace Application.Placas.Create
 {
-    public sealed class CreatePlacasCommandHandler : IRequestHandler<CreatePlacasCommand, Unit>
+    public sealed class CreatePlacasCommandHandler : IRequestHandler<CreatePlacasCommand, ErrorOr<Unit>>
     {
 
         private readonly IPlacasRepository _placasRepository;
@@ -17,7 +18,7 @@ namespace Application.Placas.Create
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
 
-        public async Task<Unit> Handle(CreatePlacasCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<Unit>> Handle(CreatePlacasCommand request, CancellationToken cancellationToken)
         {
             if (DNI.Create(request.cedula) is not DNI dNi)
             {
@@ -43,5 +44,6 @@ namespace Application.Placas.Create
 
             return Unit.Value;
         }
+
     }
 }

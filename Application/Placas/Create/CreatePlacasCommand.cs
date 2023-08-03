@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 
 namespace Application.Placas.Create
 {
@@ -13,5 +14,5 @@ namespace Application.Placas.Create
          double valorTotalPlaca, 
          bool active
 
-        ) : IRequest<Unit>;
+        ) : IRequest<ErrorOr<Unit>>;
 }
