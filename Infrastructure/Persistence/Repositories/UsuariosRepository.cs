@@ -12,14 +12,8 @@ namespace Infrastructure.Persistence.Repositories
             _context = applicationDbContext ?? throw new ArgumentNullException(nameof(applicationDbContext));
         }
 
-        public async void Add(Usuarios usuario)
-        {
-            throw new NotImplementedException();
-        }
+        public async void Add(Usuarios usuario) =>  _context.Usuario.Add(usuario);
 
-        public Task<Usuarios?> GetByUserAsync(string value)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<Usuarios?> GetByUserAsync(string usuario, string clave) => _context.Usuario.SingleOrDefault(x => x.User == usuario && x.Clave == clave);
     }
 }

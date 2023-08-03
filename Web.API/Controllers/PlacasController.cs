@@ -1,7 +1,9 @@
 ﻿using Application.Placas.Create;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ErrorOr;
+using Application.Placas.GetAll;
+using Application.Placas.GetByDNI;
+using Application.Placas.UpdatePlacaCommand;
 
 namespace Web.API.Controllers
 {
@@ -26,6 +28,44 @@ namespace Web.API.Controllers
                    customers => Ok(customers),
                    errors => Problem("Error al crear")
                );
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            var createResult = await _mediator.Send(new GetPlacasCommand());
+
+            return createResult.Match(
+                   customers => Ok(customers),
+                   errors => Problem("Error al crear")
+               );
+        }
+
+        [HttpGet("{dni}")]
+        public async Task<ActionResult> GetByDNI(string dni)
+        {
+            var createResult = await _mediator.Send(new GetByDNICommand(dni));
+
+            return createResult.Match(
+                   customers => Ok(customers),
+                   errors => Problem("Error al crear")
+               );
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Update(Guid id, [FromBody] UpdatePlacaCommand command) // Aceptar solicitud para crear # Placa
+        {
+
+            if (command.id != id)
+            {
+                return Problem("No fue posible confirmar la creacion de la placa.");
+            }
+
+            var createResult = await _mediator.Send(command);
+            return createResult.Match(
+            customers => Ok(customers),
+            err => Problem());
+
         }
     }
 }

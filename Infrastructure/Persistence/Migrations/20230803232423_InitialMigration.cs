@@ -24,7 +24,8 @@ namespace Infrastructure.Persistence.Migrations
                     TipoPersonas = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TipoAutomovil = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ValorTotalPlaca = table.Column<double>(type: "float", nullable: false),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    NumeroPlaca = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

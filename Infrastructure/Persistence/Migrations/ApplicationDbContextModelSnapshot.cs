@@ -49,6 +49,10 @@ namespace Infrastructure.Persistence.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("NumeroPlaca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TipoAutomovil")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

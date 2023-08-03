@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230803195158_InitialMigration")]
+    [Migration("20230803232423_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -51,6 +51,10 @@ namespace Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("NumeroPlaca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoAutomovil")
                         .IsRequired()

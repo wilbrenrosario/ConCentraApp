@@ -35,7 +35,8 @@ namespace Application.Placas.Create
                 request.tipoPersonas,
                 request.tipoAutomovil,
                 request.valorTotalPlaca,
-                true
+                true,
+                ""
                 );
 
             _placasRepository.Add(placa);

@@ -24,9 +24,6 @@ namespace Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
       
-        public void Update(Placa placas)
-        {
-            throw new NotImplementedException();
-        }
+        public void Update(Placa placas) => _context.Update(placas);
     }
 }
