@@ -4,9 +4,9 @@ namespace Domain.Placas;
 
 public interface IPlacasRepository
 {
-    Task<List<Placas>> GetAll();
-    Task<Placas?> GetByDNIAsync(DNI cedula);
-    void Add(Placas placas);
-    void Update(Placas placas);
-    void Delete(Placas placas);
+    Task<List<Placa>> GetAll();
+    Task<Placa?> GetByDNIAsync(DNI cedula);
+    void Add(Placa placas);
+    void Update(Placa placas);
+    void Delete(Placa placas);
 }

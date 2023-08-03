@@ -18,4 +18,11 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Placas\Delete\" />
+    <Folder Include="Placas\GetByDNI\" />
+    <Folder Include="Placas\GetAll\" />
+    <Folder Include="Placas\Update\" />
+  </ItemGroup>
+
 </Project>

@@ -2,12 +2,7 @@ namespace Domain.ValueObjects;
 
 public partial record DNI
 {
-    public DNI(string dNi)
-    {
-        Cedula = dNi;
-    }
-
-    public string Cedula { get; init; }
+    private DNI(string value) => Value = value;
 
     public static DNI? Create(string value)
     {
@@ -18,4 +13,6 @@ public partial record DNI
 
         return new DNI(value);
     }
+
+    public string Value { get; init; }
 }
