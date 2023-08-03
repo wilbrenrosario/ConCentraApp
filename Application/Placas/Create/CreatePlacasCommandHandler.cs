@@ -1,5 +1,4 @@
-﻿using Domain;
-using Domain.Placas;
+﻿using Domain.Placas;
 using Domain.Primitives;
 using Domain.ValueObjects;
 using MediatR;

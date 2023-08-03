@@ -1,13 +1,9 @@
 ﻿using Application.Data;
 using Domain.Placas;
 using Domain.Primitives;
+using Domain.Usuario;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence
 {
@@ -21,6 +17,7 @@ namespace Infrastructure.Persistence
         }
 
         public DbSet<Placa> Placas { get; set; }
+        public DbSet<Usuarios> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

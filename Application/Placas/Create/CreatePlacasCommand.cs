@@ -1,5 +1,4 @@
-﻿using Domain.ValueObjects;
-using MediatR;
+﻿using MediatR;
 
 namespace Application.Placas.Create
 {
