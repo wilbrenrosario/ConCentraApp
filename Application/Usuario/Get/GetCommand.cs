@@ -3,5 +3,5 @@ using MediatR;
 
 namespace Application.Usuario.Get
 {
-    public record GetCommand(string usuario, string clave) : IRequest<ErrorOr<Unit>>;
+    public record GetCommand(string usuario, string clave) : IRequest<ErrorOr<bool>>;
 }
