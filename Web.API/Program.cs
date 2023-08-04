@@ -13,6 +13,9 @@ builder.Services.AddPresentation()
     .AddInfrastructure(builder.Configuration)
     .AddApplication();
 
+builder.Services.AddCors();
+
+
 //JWT
 #region " JWT "
 
@@ -50,9 +53,16 @@ if (app.Environment.IsDevelopment())
     app.ApplyMigrations();
 }
 
+
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseCors(options =>
+{
+    options.WithOrigins("http://localhost:4200", "http://localhost:4200/");
+    options.AllowAnyMethod();
+    options.AllowAnyHeader();
+});
 
 app.UseHttpsRedirection();
 
