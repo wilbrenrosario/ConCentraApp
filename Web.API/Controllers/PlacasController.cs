@@ -7,7 +7,6 @@ using Application.Placas.UpdatePlacaCommand;
 
 namespace Web.API.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     public class PlacasController : ControllerBase
