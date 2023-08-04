@@ -1,25 +1,23 @@
 # ConCentraApp
 
 #BACKEND 
-Migracion de Datos:
+## Migracion de Datos:
 1. dotnet ef migrations add InitialMigration -p Infrastructure -s Web.API -o Persistence/Migrations
 2. dotnet ef database update -p Infrastructure -s Web.API
 
-PATRONES UTILIZADOS:
-Patron Clean Arquitecture
-Patron DDD(Domain Driven Desing)
-Patron CQRS (segregacion de responsabilidades de comandos y consultas)(separacion de modelos)
-
-Version .Net Core 7
-Seguridad por token JWT
-CRUD con SQL Server
-
+PATRONES Y ELEMENTOS UTILIZADOS:
+1. Patron Clean Arquitecture
+2. Patron DDD(Domain Driven Desing)
+3. Patron CQRS (segregacion de responsabilidades de comandos y consultas)(separacion de modelos)
+4 .Version .Net Core 7
+5. Seguridad por token JWT
+6. CRUD con SQL Server
 
 #FRONTEND
 
 Version Angular 16+
-Estilos de framework : Angular Material, Bootstrap y diseño
-Interceptor (Observable)
-Modelos (Usuarios, Placas)
-Servicio DbContext
-Multiples componentes
+1. Estilos de framework : Angular Material, Bootstrap y diseño
+2. Interceptor (Observable)
+3. Modelos (Usuarios, Placas)
+4. Servicio DbContext
+5. Multiples componentes
