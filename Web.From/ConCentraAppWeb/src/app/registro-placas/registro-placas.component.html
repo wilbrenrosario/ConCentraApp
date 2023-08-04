@@ -43,20 +43,28 @@
                   <input formControlName="Cedula" class="form-control" placeholder="Cedula">
                 </div>
                 <div class="mb-3">
-                  <input formControlName="FechaNacimiento" type="datetime-local" min="2022-06-07T00:00"
-                  max="2028-06-14T00:00" class="form-control" placeholder="Fecha Nacimiento" >
+                  <input formControlName="FechaNacimiento" type="datetime-local" min="1980-06-07T00:00"
+                  max="2050-06-14T00:00" class="form-control" placeholder="Fecha Nacimiento" >
                 </div>
                 <div class="mb-3">
                   <input formControlName="TipoPlaca" class="form-control" placeholder="Tipo Placa">
                 </div>
                 <div class="mb-3">
-                  <input formControlName="TipoPersonas" class="form-control" placeholder="Tipo Persona">
+                  <select formControlName="TipoPersonas" class="form-control" placeholder="Tipo Persona">
+                    <option value="-1" selected>Tipo Persona</option>
+                    <option value="Fisica">Fisica</option>
+                    <option value="Juridica">Juridica</option>
+                  </select>
                 </div>
                 <div class="mb-3">
-                  <input formControlName="TipoAutomovil" class="form-control" placeholder="Tipo Automovil">
+                  <select formControlName="TipoAutomovil" class="form-control" placeholder="Tipo Automovil">
+                    <option value="-1" selected>Tipo Automovil</option>
+                    <option value="Publico">Publico</option>
+                    <option value="Privado">Privado</option>
+                  </select>
                 </div>
                 <div class="mb-3">
-                  <input formControlName="ValorTotal" type="number" class="form-control" placeholder="Valor Placa">
+                  <input formControlName="ValorTotalPlaca" type="number" class="form-control" placeholder="Valor Placa">
                 </div>
 
                 <div class="text-center">

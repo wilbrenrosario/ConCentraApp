@@ -19,8 +19,12 @@ export class DbContextService {
     }),
   };
 
-  getPlacas() : Observable<Placas> {
-    return this.http.get<Placas>(this.Url + "Placas", this.httpOptions);
+  getPlacas() : Observable<Placas[]> {
+    return this.http.get<Placas[]>(this.Url + "Placas", this.httpOptions);
+  }
+
+  getPlacasGeneradas() : Observable<Placas[]> {
+    return this.http.get<Placas[]>(this.Url + "Placas/GetAllNotActive/false", this.httpOptions);
   }
 
   postPlaca(placa: Placas) : Observable<Placas> {
@@ -31,7 +35,7 @@ export class DbContextService {
     return this.http.get<Placas>( this.Url + "Placas/" + dni);
   }
 
-  putPlacasB(id: string, placa: Placas) : Observable<void> {
+  putPlacas(id: string, placa: Placas) : Observable<void> {
     return this.http.put<void>(this.Url + "Placas/" + id, placa);
   }
 

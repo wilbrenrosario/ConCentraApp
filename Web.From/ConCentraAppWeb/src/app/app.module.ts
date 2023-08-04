@@ -12,12 +12,17 @@ import { RegistroPlacasComponent } from './registro-placas/registro-placas.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DbContextService } from './services/db-context.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ConsultarPlacasComponent } from './consultar-placas/consultar-placas.component';
+import { MatTableModule } from '@angular/material/table';
+import { ConsultarPlacasGeneradasComponent } from './consultar-placas-generadas/consultar-placas-generadas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RegistroPlacasComponent
+    RegistroPlacasComponent,
+    ConsultarPlacasComponent,
+    ConsultarPlacasGeneradasComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
   ],
   providers: [DbContextService],
   bootstrap: [AppComponent]

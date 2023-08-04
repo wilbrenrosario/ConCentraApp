@@ -59,7 +59,7 @@ namespace Application.Placas.UpdatePlacaCommand
                 request.tipoPersonas,
                 request.tipoAutomovil,
                 request.valorTotalPlaca,
-                true,
+                false,
                 request.fechaNacimiento,
                 placaNumero);
 

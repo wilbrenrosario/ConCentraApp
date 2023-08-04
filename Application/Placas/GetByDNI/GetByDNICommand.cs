@@ -4,5 +4,5 @@ using MediatR;
 
 namespace Application.Placas.GetByDNI
 {
-    public record GetByDNICommand(string dni) : IRequest<ErrorOr<IReadOnlyList<PlacasResponse>>>;
+    public record GetByDNICommand(string dni) : IRequest<ErrorOr<IReadOnlyList<PlacasResponseValues>>>;
 }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Application.Placas.GetAll;
 using Application.Placas.GetByDNI;
 using Application.Placas.UpdatePlacaCommand;
+using Application.Placas.GetAllNotActive;
 
 namespace Web.API.Controllers
 {
@@ -44,6 +45,17 @@ namespace Web.API.Controllers
         public async Task<ActionResult> GetByDNI(string dni)
         {
             var createResult = await _mediator.Send(new GetByDNICommand(dni));
+
+            return createResult.Match(
+                   customers => Ok(customers),
+                   errors => Problem("Error al crear")
+               );
+        }
+
+        [HttpGet("GetAllNotActive/{active}")]
+        public async Task<ActionResult> GetAllNotActive(bool active)
+        {
+            var createResult = await _mediator.Send(new GetAllNotActiveCommand(active));
 
             return createResult.Match(
                    customers => Ok(customers),

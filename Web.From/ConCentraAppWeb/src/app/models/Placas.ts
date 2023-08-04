@@ -8,6 +8,7 @@ export class Placas {
   public tipoPersonas: string
   public tipoAutomovil: string
   public valorTotalPlaca: number
+  public numeroPlaca: string
 
   constructor(){
       this.id = "";
@@ -19,6 +20,7 @@ export class Placas {
       this.tipoPersonas = "";
       this.tipoAutomovil = "";
       this.valorTotalPlaca = 0;
+      this.numeroPlaca = "";
   }
 }
 
