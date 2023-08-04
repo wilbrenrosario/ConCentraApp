@@ -1,0 +1,6 @@
+# ConCentraApp
+
+#BACKEND 
+
+
+#FRONTEND
