@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Application.Usuario.Get
 {
-    public sealed class GetCommandHandler : IRequestHandler<GetCommand, ErrorOr<Unit>>
+    public sealed class GetCommandHandler : IRequestHandler<GetCommand, ErrorOr<bool>>
     {
 
         private readonly IUsuarioRepository _usuarioRepository;
@@ -16,17 +16,17 @@ namespace Application.Usuario.Get
             _usuarioRepository = usuarioRepository ?? throw new ArgumentNullException(nameof(usuarioRepository));
         }
 
-        public async Task<ErrorOr<Unit>> Handle(GetCommand request, CancellationToken cancellationToken)
+        public async Task<ErrorOr<bool>> Handle(GetCommand request, CancellationToken cancellationToken)
         {
             var pla = await _usuarioRepository.GetByUserAsync(request.usuario, request.clave);
 
-            if (pla != null)
+            if (pla != null) //ENCONTRADO
             {
-                return Unit.Value;
+                return true;
             }
             else
             {
-                throw new ArgumentException(nameof(pla));
+                return false;
             }
         }
     }

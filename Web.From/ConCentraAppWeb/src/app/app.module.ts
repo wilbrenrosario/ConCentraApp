@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConsultarPlacasComponent } from './consultar-placas/consultar-placas.component';
 import { MatTableModule } from '@angular/material/table';
 import { ConsultarPlacasGeneradasComponent } from './consultar-placas-generadas/consultar-placas-generadas.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConsultarPlacasGeneradasComponent } from './consultar-placas-generadas/
     HomeComponent,
     RegistroPlacasComponent,
     ConsultarPlacasComponent,
-    ConsultarPlacasGeneradasComponent
+    ConsultarPlacasGeneradasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

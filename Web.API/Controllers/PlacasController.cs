@@ -5,9 +5,11 @@ using Application.Placas.GetAll;
 using Application.Placas.GetByDNI;
 using Application.Placas.UpdatePlacaCommand;
 using Application.Placas.GetAllNotActive;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Web.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PlacasController : ControllerBase
