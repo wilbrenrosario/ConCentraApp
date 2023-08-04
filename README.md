@@ -21,3 +21,11 @@ Version Angular 16+
 3. Modelos (Usuarios, Placas)
 4. Servicio DbContext
 5. Multiples componentes
+
+## Visuales
+![login](https://github.com/wilbrenrosario/ConCentraApp/assets/41119318/77db24f1-c709-4d36-9cd7-9dafa4c144e3)
+
+![home](https://github.com/wilbrenrosario/ConCentraApp/assets/41119318/70cacb6d-7aae-49e4-91c4-95c8b336a35f)
+
+
+
