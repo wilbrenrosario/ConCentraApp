@@ -4,6 +4,8 @@
 - Migracion de Datos
   1. dotnet ef migrations add InitialMigration -p Infrastructure -s Web.API -o Persistence/Migrations
   2. dotnet ef database update -p Infrastructure -s Web.API
+  3. <span style="color:red">(IMPORTANTE)</span> Luego debes desde el Swagger del backend ejecutar la creacion de usuarios, para crear un usuario valido para acceder a la web.
+- (IMPORTANTE) Luego debes desde el Swagger del backend ejecutar la creacion de usuarios, para crear un usuario valido para acceder a la web.
 
 - PATRONES Y ELEMENTOS UTILIZADOS:
   1. Patron Clean Arquitecture
